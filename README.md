@@ -11,6 +11,13 @@ The prototype:
 - keeps a visible action record;
 - handles cancellation, delay, hotel, refund, rebooking and escalation requests.
 
+## Run locally
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+
 ## Demo scenarios
 1. Priya Nair — cancellation, refund/rebooking, business-class request.
 2. Arvind Kulkarni — 4-hour delay and hotel request.

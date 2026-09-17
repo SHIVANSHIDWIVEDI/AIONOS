@@ -1,0 +1,101 @@
+{
+  "customer_profiles": [
+    {
+      "name": "Priya Nair",
+      "tier": "Gold",
+      "pnr": "SK4821X",
+      "contact": "Supplied in assignment data pack",
+      "flights": 6,
+      "prior_complaints": "1 prior complaint resolved with voucher"
+    },
+    {
+      "name": "Arvind Kulkarni",
+      "tier": "Silver",
+      "pnr": "TR1190B",
+      "contact": "Supplied in assignment data pack",
+      "flights": 3,
+      "prior_complaints": "None"
+    },
+    {
+      "name": "Meher Kaur",
+      "tier": "Platinum",
+      "pnr": "WL7742",
+      "contact": "Supplied in assignment data pack",
+      "flights": 10,
+      "prior_complaints": "1 prior complaint overbooking resolved with tier upgrade"
+    }
+  ],
+  "booking_data": [
+    {
+      "pnr": "SK4821X",
+      "flight_number": "SK-204",
+      "route": "Delhi → Goa",
+      "date": "23 Sep 2026",
+      "scheduled_departure": "18:40",
+      "disruption_type": "cancelled",
+      "status": "Cancelled due to operational reasons",
+      "delay_hours": 0,
+      "return_flight": "Goa → Delhi, Fri 25 Sep 2026 16:20, unaffected"
+    },
+    {
+      "pnr": "TR1190B",
+      "flight_number": "SK-118",
+      "route": "Mumbai → Bengaluru",
+      "date": "23 Sep 2026",
+      "scheduled_departure": "07:10",
+      "disruption_type": "delayed",
+      "status": "Delayed 4 hours; new departure 11:10",
+      "delay_hours": 4
+    },
+    {
+      "pnr": "WL7742",
+      "flight_number": "SK-305",
+      "route": "Delhi → Hyderabad",
+      "date": "23 Sep 2026",
+      "scheduled_departure": "14:00",
+      "disruption_type": "delayed",
+      "status": "Delayed 6 hours; new departure 20:00",
+      "delay_hours": 6
+    }
+  ],
+  "service_rules": {
+    "airline_caused_cancellation": "Free rebooking on the next available flight within 24 hours OR full refund; customer's choice.",
+    "delay_under_3h": "₹500 meal voucher.",
+    "delay_over_3h": "Meal voucher + lounge access.",
+    "delay_over_5h": "Meal voucher + hotel accommodation covering only delayed hours, not the full night.",
+    "cancellation_refund": "Full refund within 7 business days to the original payment method only.",
+    "higher_fare_rebooking": "Customer pays fare difference; agent cannot waive fare differences above ₹1,500 without supervisor approval.",
+    "priority": "Gold and Platinum customers get priority rebooking; no additional compensation beyond standard policy."
+  },
+  "allowed_actions": [
+    "Rebook next available within 24h at no charge for airline-caused disruption",
+    "Issue meal vouchers / lounge access",
+    "Arrange delayed-hours hotel where qualified",
+    "Initiate refund",
+    "Provide own booking / flight status"
+  ],
+  "prohibited_or_escalate": [
+    "Compensation beyond policy",
+    "Waive fare difference above ₹1,500",
+    "Exceptions for non-airline-caused disruptions",
+    "Threats / legal / formal complaints immediately",
+    "Refunds to a different payment method"
+  ],
+  "scenarios": [
+    {
+      "customer": "Priya Nair",
+      "issue": "SK-204 cancelled",
+      "customer_request": "Full cash refund + free business-class upgrade on return"
+    },
+    {
+      "customer": "Arvind Kulkarni",
+      "issue": "SK-118 delayed 4h",
+      "customer_request": "Hotel due to long delay"
+    },
+    {
+      "customer": "Meher Kaur",
+      "issue": "SK-305 delayed 6h",
+      "customer_request": "Full-night hotel and higher-fare flight with ₹2,000 difference"
+    }
+  ]
+}
